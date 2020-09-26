@@ -1,0 +1,15 @@
+{
+  "name": "crustation_bot",
+  "version": "1.0.0",
+  "description": "This bot exists to ensure that each message that TJ sends is fully Crustationed. ",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Geist",
+  "license": "MIT"
+}
