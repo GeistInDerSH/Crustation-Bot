@@ -62,9 +62,13 @@ client.on('message', message => {
 			message.react('🇮');
 			message.react('🇨');
 			message.react('🇪');
-	} else if (text.includes("games") || text.includes("gamz") || text.includes('gamez'))
+	}
+	else if (text.includes("games") || text.includes("gamz") || text.includes('gamez'))
 	{
 			message.react('🎮');
 			message.react('❓');
+	} else if (text.includes("pen15"))
+	{
+		message.react('🍆');
 	}
 });
