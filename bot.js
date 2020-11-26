@@ -5,6 +5,22 @@ const token = '';
 client.login(token);
 
 client.on('message', message => {
+	let curr_date = message.createdAt;
+	let ymd = `${curr_date.getMonth() + 1}-${curr_date.getDate()}`;
+
+	switch (ymd)
+	{
+		case '11-26':
+			message.react('🦃');
+			break;
+		case '12-25':
+			message.react('🎅');
+			break;
+		case '12-31':
+			message.react('🎉');
+			break;
+	}
+
 	// Add reaction based on who sent the message
 	switch (message.author.id)
 	{
@@ -19,7 +35,7 @@ client.on('message', message => {
 
 		// @naps
 		case '180729155829104640':
-			//message.react('🐒');
+			message.react('🐒');
 			break;
 
 		// @ZaqueXIII
@@ -36,6 +52,7 @@ client.on('message', message => {
 
 		// @JorJor The Dinosaur
 		case '205043049024323584':
+			message.react('🚚');
 			break;
 
 		// @Roost
@@ -49,6 +66,19 @@ client.on('message', message => {
 		// @Blahman
 		case '220341843315916800':
 			break;
+
+		// @GaryArk3443
+		case '388449127333232642':
+			break;
+
+		// @A Single Neuron
+		case '187039157426585600':
+			break;
+
+		// @lucii
+		case '424766351622537216';
+			break;
+
 		default:
 			break;
 	}
@@ -67,7 +97,8 @@ client.on('message', message => {
 	{
 			message.react('🎮');
 			message.react('❓');
-	} else if (text.includes("pen15"))
+	}
+	else if (text.includes("pen15"))
 	{
 		message.react('🍆');
 	}
