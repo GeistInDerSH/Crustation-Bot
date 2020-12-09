@@ -10,14 +10,56 @@ client.on('message', message => {
 
 	switch (ymd)
 	{
+		// Thanksgiving
 		case '11-26':
 			message.react('🦃');
 			break;
+
+		// X-Mass
 		case '12-25':
-			message.react('🎅');
+			message.react('🎄');
 			break;
+
+		// New Years Eve
 		case '12-31':
 			message.react('🎉');
+			break;
+
+		// Hanukkah 2020 Dates
+		case '12-10':
+		case '12-11':
+		case '12-12':
+		case '12-13':
+		case '12-14':
+		case '12-15':
+		case '12-16':
+		case '12-17':
+		case '12-18':
+			let r = Math.floor(Math.random() * 100) % 5;
+			let emoji = '🕎';
+
+			switch (r)
+			{
+				case 0:
+					emoji = '🕎';
+					break;
+				case 1:
+					emoji = '🕯️';
+					break;
+				case 2:
+					emoji = '🥞';
+					break;
+				case 3:
+					emoji = '🎁';
+					break;
+				case 4:
+					emoji = '✡️';
+					break;
+			}
+			message.react(emoji);
+			break;
+
+		default:
 			break;
 	}
 
