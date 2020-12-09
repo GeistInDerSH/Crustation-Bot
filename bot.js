@@ -118,7 +118,7 @@ client.on('message', message => {
 			break;
 
 		// @lucii
-		case '424766351622537216';
+		case '424766351622537216':
 			break;
 
 		default:
