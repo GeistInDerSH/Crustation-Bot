@@ -4,6 +4,19 @@ const token = '';
 
 client.login(token);
 
+function containsPen15(str) {
+	let index = str.indexOf("pen");
+
+	if (index === -1)
+		return false;
+
+	let nums = str.substring(index + 3, str.length);
+
+	if (eval(nums) === 15)
+		return true;
+	return false;
+}
+
 client.on('message', message => {
 	let curr_date = message.createdAt;
 	let ymd = `${curr_date.getMonth() + 1}-${curr_date.getDate()}`;
@@ -18,6 +31,11 @@ client.on('message', message => {
 		// X-Mass
 		case '12-25':
 			message.react('🎄');
+			break;
+
+		// Boxing day
+		case '12-26':
+			message.react('📦');
 			break;
 
 		// New Years Eve
@@ -135,12 +153,16 @@ client.on('message', message => {
 			message.react('🇨');
 			message.react('🇪');
 	}
-	else if (text.includes("games") || text.includes("gamz") || text.includes('gamez'))
+
+	if (text.includes("games") ||
+		text.includes("gamz") ||
+		text.includes('gamez'))
 	{
 			message.react('🎮');
 			message.react('❓');
 	}
-	else if (text.includes("pen15"))
+
+	if (containsPen15(text))
 	{
 		message.react('🍆');
 	}
