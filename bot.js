@@ -5,20 +5,29 @@ const token = '';
 client.login(token);
 
 function containsPen15(str) {
-	let index = str.indexOf("pen");
+	try
+	{
+		let index = str.indexOf("pen");
 
-	if (index === -1)
+		if (index === -1)
+			return false;
+
+		let nums = str.substring(index + 3, str.length);
+
+		if (eval(nums) === 15)
+			return true;
 		return false;
+	}
+	catch (e)
+	{
+		return false;
+	}
 
-	let nums = str.substring(index + 3, str.length);
-
-	if (eval(nums) === 15)
-		return true;
-	return false;
 }
 
 client.on('message', message => {
-	let curr_date = message.createdAt;
+	//let curr_date = message.createdAt;
+	let curr_date = new Date();
 	let ymd = `${curr_date.getMonth() + 1}-${curr_date.getDate()}`;
 
 	switch (ymd)
@@ -40,6 +49,9 @@ client.on('message', message => {
 
 		// New Years Eve
 		case '12-31':
+			message.react('🎉');
+			break;
+		case '01-01':
 			message.react('🎉');
 			break;
 
@@ -112,7 +124,7 @@ client.on('message', message => {
 
 		// @JorJor The Dinosaur
 		case '205043049024323584':
-			message.react('🚚');
+			message.react('💧');
 			break;
 
 		// @Roost
