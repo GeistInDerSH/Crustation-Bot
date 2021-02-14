@@ -2,7 +2,7 @@ from datetime import date
 
 class Reaction:
     def __init__(self, user, message):
-        self.user = user
+        self.user = str(user)
         self.message = message
 
         # Each of the unique Discord ids for the users
