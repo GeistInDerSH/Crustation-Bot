@@ -117,6 +117,13 @@ class Reaction:
         return lst
 
     def contains_pen15(self) -> bool:
+        """
+            Checks if the message contains 'pen15' or 'pen' an expression
+            that evaluates to 15
+
+            Return:
+                If the string contains 'pen15'
+        """
         try:
             pen = self.message.find('pen')
             if pen == -1: return False
