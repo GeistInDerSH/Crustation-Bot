@@ -127,6 +127,7 @@ class Reaction:
         try:
             pen = self.message.find('pen')
             if pen == -1: return False
+            if self.message.find('pen15') != -1: return True
 
             nums = self.message[pen + 3:].strip()
 
