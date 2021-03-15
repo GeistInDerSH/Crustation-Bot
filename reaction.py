@@ -45,6 +45,7 @@ class Reaction:
 			'01-01': Emoji(['🎉'], [f'New Year\'s Day ({year}-01-01)']),
 			# Valentines Day
 			'02-14': Emoji(['💘', '🌵'], [f'Valentine\'s Day ({year}-02-14)', f'Ariziona\'s {year - 1912} Birthday ({year}-02-14)']),
+			'03-14': Emoji(['🥧'], ['3.14159265358979323846264338327950288419716939937510582097494459230781640']),
 			# 4th of July
 			'07-04': Emoji(['🇺🇸'], [f'America\'s {date.today().year - 1776} Birthday ({year}-07-04)']),
 			# Thanksgiving
